@@ -1,0 +1,120 @@
+.thead,
+.tbody {
+  display: block;
+  overflow-y: scroll;
+}
+.tbody {
+  height: 300px;
+}
+.th,
+.tr {
+  display: grid;
+  grid-template-columns: 15fr 15fr 20fr 15fr 15fr;
+  text-align: center;
+  width: center;
+}
+.th {
+  margin: 15px 15px 0;
+  grid-template-rows: 50px;
+}
+.tr {
+  margin: 0 15px 0;
+  grid-auto-rows: 40px;
+}
+.lastName,
+.firstName,
+.email,
+.approved,
+.del {
+  border: 1px solid #8d003b;
+}
+.delCheck {
+  font-size: 16px;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 1300px) {
+  .tbody {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .thead,
+  .tbody {
+    display: block;
+    overflow-y: scroll;
+    min-width: 98%;
+  }
+  .tbody {
+    border-bottom: 1px solid #8d003b;
+    overflow: auto;
+    height: 300px;
+  }
+  .th,
+  .tr,
+  .td {
+    grid-template-columns: 15fr 15fr 15fr 15fr;
+    text-align: center;
+  }
+  .th {
+    margin: 20px 20px 0;
+    grid-template-rows: 50px;
+  }
+  .td {
+    margin: 0 20px 0;
+    grid-auto-rows: 40px;
+  }
+  .th > th:nth-child(3),
+  .tr > td:nth-child(3) {
+    display: none;
+  }
+  .delCheck {
+    font-size: 24px;
+    vertical-align: bottom;
+  }
+}
+@media screen and (max-width: 768px) {
+  .thead,
+  .tbody {
+    display: block;
+    overflow-y: scroll;
+    width: 98%;
+  }
+  .tbody {
+    height: 300px;
+    overflow: auto;
+  }
+  .th,
+  .tr,
+  .td {
+    grid-template-columns: 12fr 12fr 12fr;
+    text-align: center;
+    width: center;
+  }
+  .th {
+    margin: 20px 20px 0;
+    grid-template-rows: 50px;
+  }
+  .td {
+    margin: 0 20px 0;
+    grid-auto-rows: 40px;
+  }
+  .th > th:nth-child(3),
+  .tr > td:nth-child(3),
+  .th > th:nth-child(4),
+  .tr > td:nth-child(4) {
+    display: none;
+  }
+  .lastName,
+  .firstName,
+  .email,
+  .approved,
+  .del {
+    border: 1px solid #8d003b;
+    border-left: 0px solid #8d003b;
+    border-right: 0px solid #8d003b;
+  }
+  .delCheck {
+    font-size: 24px;
+    vertical-align: bottom;
+  }
+}

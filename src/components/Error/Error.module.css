@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.error {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto;
+  width: 150px;
+  min-height: 150px;
+}
+.title,
+.text {
+  margin: auto auto;
+  color: #8d003b;
+}
+.text {
+  font-size: 24px;
+}

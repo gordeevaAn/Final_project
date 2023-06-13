@@ -1,0 +1,258 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 1235px;
+  height: 100px;
+  color: #8d003b;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 50%;
+  font-family: "Montserrat", sans-serif;
+}
+.navbarBurgerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 100vw;
+  min-height: 100vh;
+  color: #8d003b;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 50%;
+  font-family: "Montserrat", sans-serif;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navBurgerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+.link,
+.linkBurgerMenu {
+  margin: 5px 10px;
+  color: #8d003b;
+  text-decoration: none;
+}
+a:link {
+  color: #8d003b;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+.link::after,
+.linkBurgerMenu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: #d9005b;
+  transition: width 0.5s;
+}
+.link:hover::after,
+.linkBurgerMenu:hover::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  background-color: #166935;
+  transition: width 0.5s;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.buttonsBurgerMenu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.registration,
+.authorization {
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 140%;
+  color: #8d003b;
+  background: inherit;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.registration {
+  margin-right: 10px;
+}
+.registration::before,
+.registration::after,
+.authorization::before,
+.authorization::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  box-sizing: border-box;
+}
+.registration::before,
+.authorization::before {
+  bottom: 0;
+  left: 0;
+  border-left: 2px solid #8d003b;
+  border-top: 2px solid #8d003b;
+  border-radius: 10px;
+  transition: 0s ease opacity 0.8s, 0.2s ease width 0.4s, 0.2s ease height 0.6s;
+}
+.registration::after,
+.authorization::after {
+  top: 0;
+  right: 0;
+  border-right: 2px solid #166935;
+  border-bottom: 2px solid #166935;
+  border-radius: 10px;
+  transition: 0s ease opacity 0.3s, 0.2s ease width, 0.2s ease height 0.2s;
+}
+.registration:hover:before,
+.registration:hover:after,
+.authorization:hover:before,
+.authorization:hover:after {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+.registration:hover:before,
+.authorization:hover:before {
+  transition: 0s ease opacity 0s, 0.2s ease height, 0.2s ease width 0.2s;
+}
+.registration:hover:after,
+.authorization:hover:after {
+  transition: 0s ease opacity 0.3s, 0.2s ease height 0.4s, 0.2s ease width 0.4s;
+}
+.registration:hover,
+.authorization:hover {
+  background: inherit;
+}
+@media screen and (max-width: 1300px) {
+  .navbar {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .li {
+    position: relative;
+  }
+  .regBurgerMenu,
+  .authBurgerMenu {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    color: #8d003b;
+    background: inherit;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .authBurgerMenu:hover,
+  .regBurgerMenu:hover {
+    border-bottom: 1px solid #166935;
+  }
+
+  .registration {
+    display: none;
+  }
+  .authorization {
+    display: none;
+  }
+}
+@media screen and (max-width: 1105px) {
+  .link {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    max-width: 1023px;
+    margin: 0 auto;
+  }
+  .link {
+    display: none;
+  }
+  .li {
+    position: relative;
+  }
+  .regBurgerMenu,
+  .authBurgerMenu {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    color: #8d003b;
+    background: inherit;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .authBurgerMenu:hover,
+  .regBurgerMenu:hover {
+    border-bottom: 1px solid #166935;
+  }
+
+  .registration {
+    display: none;
+  }
+  .authorization {
+    display: none;
+  }
+}
+@media screen and (max-width: 639px) {
+  .navbar,
+  .navbarBurgerMenu {
+    max-width: 639px;
+    margin: 0 auto;
+  }
+  .link {
+    display: none;
+  }
+  .regBurgerMenu,
+  .authBurgerMenu {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    color: #8d003b;
+    background: inherit;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .authBurgerMenu:hover,
+  .regBurgerMenu:hover {
+    border-bottom: 1px solid #166935;
+  }
+  .registration {
+    display: none;
+  }
+  .authorization {
+    display: none;
+  }
+}

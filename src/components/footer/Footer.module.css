@@ -1,0 +1,106 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  min-height: 20px;
+  max-width: 100vw;
+  background-color: inherit;
+  position: absolute;
+  z-index: 3;
+  bottom: 15px;
+  color: #8d003b;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+.contacts {
+  position: relative;
+  font-size: 25px;
+}
+.contacts p {
+  cursor: pointer;
+  padding: 23px;
+}
+a {
+  list-style: none;
+  display: inline;
+}
+.social {
+  position: relative;
+}
+
+.facebook,
+.twitter,
+.instagram {
+  height: 60px;
+}
+.social::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: #d9005b;
+  transition: width 0.5s;
+}
+.social:hover::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  height: 2px;
+  background-color: #166935;
+  transition: width 0.5s;
+}
+
+@media screen and (max-width: 1300px) {
+  .footer {
+    max-width: 1439px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer {
+    max-width: 1023px;
+    margin: 0 auto;
+  }
+  .nav {
+    display: flex;
+    flex-direction: inherit;
+  }
+  .facebook,
+  .twitter,
+  .instagram {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    margin: 0 auto;
+  }
+  .nav {
+    display: flex;
+    flex-direction: inherit;
+  }
+  .facebook,
+  .twitter,
+  .instagram {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .contacts {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

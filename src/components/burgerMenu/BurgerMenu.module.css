@@ -1,0 +1,69 @@
+.menu {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  align-self: center;
+  z-index: 30;
+  transform: translateX(0);
+  transition: all 0.2s;
+  background-color: #1c967d;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+  font-family: "Montserrat";
+}
+.menuTop {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 34.5px 0 24px;
+  font-size: 24px;
+  color: #8d003b;
+}
+
+.active {
+  color: #8d003b;
+}
+
+@media screen and (max-width: 1300px) {
+  .menuTop,
+  .menu {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .content {
+    max-width: 1300px;
+  }
+  .close {
+    align-self: center;
+  }
+  .menuTop {
+    justify-content: space-between;
+    max-width: 1023px;
+    margin: 20px 34.5px 0 24px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .menuTop,
+  .menu {
+    max-width: 639px;
+    margin: 0 auto;
+  }
+  .menu {
+    max-width: 639px;
+  }
+  .content {
+    max-width: 639px;
+  }
+  .close {
+    align-self: center;
+  }
+  .menuTop {
+    justify-content: space-between;
+    max-width: 639px;
+    margin: 20px 34.5px 0 24px;
+  }
+}

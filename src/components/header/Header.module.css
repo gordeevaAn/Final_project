@@ -1,0 +1,119 @@
+.header {
+  display: flex;
+  justify-content: center;
+  min-height: 70px;
+  width: 100%;
+
+  position: fixed;
+  z-index: 3;
+  top: 0;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 1235px;
+  height: 100px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 50%;
+  font-family: "KaushanScript", sans-serif;
+}
+.burgerMenu {
+  display: none;
+}
+@media screen and (max-width: 1300px) {
+  .header,
+  .wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .burgerMenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header,
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .burgerMenu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .burgerButton {
+    width: 24px;
+    height: 15px;
+    margin-right: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  .burgerButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 3px;
+    background-color: #8d003b;
+  }
+  .burgerButton span {
+    position: absolute;
+    top: 6px;
+    width: 24px;
+    height: 3px;
+    background-color: #8d003b;
+  }
+  .burgerButton::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 24px;
+    height: 3px;
+    background-color: #8d003b;
+  }
+}
+@media screen and (max-width: 639px) {
+  .header,
+  .wrapper {
+    max-width: 639px;
+    margin: 0 auto;
+  }
+  .burgerMenu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .burgerButton {
+    width: 24px;
+    height: 15px;
+    margin-right: 40px;
+    position: relative;
+    cursor: pointer;
+    background-color: inherit;
+  }
+  .burgerButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 3px;
+    background-color: #8d003b;
+  }
+  .burgerButton span {
+    position: absolute;
+    top: 6px;
+    width: 24px;
+    height: 3px;
+  }
+  .burgerButton::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 24px;
+    height: 3px;
+    background-color: #8d003b;
+  }
+}

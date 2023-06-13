@@ -1,0 +1,79 @@
+.mainPage {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 1235px;
+  margin: auto 0;
+  position: relative;
+  font-family: "Pacifico", sans-serif;
+}
+.main {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    185deg,
+    rgba(34, 193, 195, 1) 3%,
+    rgba(19, 82, 17, 1) 100%
+  );
+
+  position: absolute;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  z-index: 1;
+}
+.left {
+  display: flex;
+  flex: 0 1 50%;
+  height: auto;
+  width: 30%;
+  margin-top: 200px;
+  margin-left: 0;
+  margin-bottom: 200px;
+  padding: 15px 10px 10px 20px;
+  overflow: visible;
+  z-index: 2;
+}
+.right {
+  background-image: url("../../images/bicycle.png");
+  background-repeat: no-repeat;
+  z-index: 2;
+  height: 450px;
+  flex: 0 1 50%;
+  margin-top: 200px;
+}
+
+.text {
+  color: #8d003b;
+  font-weight: 500;
+  font-size: 25px;
+  font-family: "Pacifico", sans-serif;
+  line-height: 140%;
+}
+.em {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 991px) {
+  .wrapper {
+    display: grid;
+    margin: auto 0;
+  }
+  .left {
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .right {
+    margin-top: auto;
+    background-position: top;
+  }
+  .text {
+    font-size: 22px;
+  }
+}

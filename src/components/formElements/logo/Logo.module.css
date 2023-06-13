@@ -1,0 +1,32 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 50%;
+  width: 100px;
+  min-height: 100px;
+}
+.logo {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #8d003b;
+  font-family: "Pacifico", serif;
+}
+.text {
+  font-size: 18px;
+  line-height: 50%;
+  margin-top: 10px;
+  font-family: "Montserrat", serif;
+}
+@media screen and (max-width: 1300px) {
+  .logo {
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .logo {
+    margin-left: 15px;
+  }
+}

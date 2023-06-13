@@ -1,0 +1,149 @@
+.caseForm {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background: linear-gradient(
+    185deg,
+    rgba(34, 193, 195, 1) 3%,
+    rgba(19, 82, 17, 1) 100%
+  );
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-width: 1235px;
+  min-height: 100%;
+  margin: 0 auto;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 120px;
+  margin-top: 270px;
+  margin-left: 580px;
+  z-index: 6;
+  position: absolute;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  height: 470px;
+  border: 2px solid #8d003b;
+  background: linear-gradient(
+    185deg,
+    rgba(34, 193, 195, 1) 3%,
+    rgba(19, 82, 17, 1) 100%
+  );
+  border-radius: 20px;
+  margin: 130px auto 0;
+  z-index: 1;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8d003b;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+.comment {
+  font-size: 16px;
+  margin-top: 10px;
+  padding-left: 30px;
+  color: #8d003b;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.formLeft,
+.formRight {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.button {
+  display: flex;
+  margin: 20px auto;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1300px) {
+  .caseForm,
+  .wrapper {
+    max-width: 1439px;
+    min-width: 100vw;
+    margin: 0 auto;
+    height: 100vh;
+  }
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 991px) {
+  .caseForm,
+  .wrapper {
+    min-width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+    overflow: auto;
+  }
+  .form {
+    flex: 0 1 70%;
+    min-width: 90%;
+    min-height: 760px;
+    overflow: auto;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .formLeft,
+  .formRight {
+    align-items: center;
+  }
+  .comment {
+    margin: 10px auto 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form {
+    padding-left: 40px;
+  }
+  .caseForm,
+  .wrapper {
+    min-width: 90%;
+    margin: 0 auto;
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  .form {
+    flex: 0 1 70%;
+    max-height: 750px;
+    overflow: auto;
+    margin: 130px auto 0;
+    padding: 5px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .formLeft,
+  .formRight {
+    align-items: center;
+  }
+  .comment {
+    margin: 10px auto 0;
+  }
+}

@@ -1,0 +1,36 @@
+.btn {
+  cursor: pointer;
+  display: flex;
+  margin: 0 auto;
+  font-family: "Montserrat";
+  font-size: 20px;
+  color: #8d003b;
+  text-shadow: 1px 1px #fff;
+  text-decoration: none;
+  padding: 0.3em 1em;
+  border: 1px solid #8d003b;
+  border-radius: 100px;
+  outline: none;
+  background: #d6dbbf no-repeat;
+  background-image: linear-gradient(to left, #aaa, #aaa),
+    linear-gradient(to left, #feffe8, #feffe8),
+    linear-gradient(#feffe8, #d6dbbf);
+
+  background-size: 1px 100%, 1px 100%, auto auto;
+  overflow: hidden;
+}
+.btn:hover {
+  background-color: #fafa06;
+  background-image: linear-gradient(to left, #aaa, #aaa),
+    linear-gradient(to left, #feffe8, #eaf520),
+    linear-gradient(#fffce7, #f5f565);
+}
+.btn:active:after {
+  bottom: -1.2em;
+  transition: 0.3s;
+}
+@media screen and (max-width: 991px) {
+  .btn {
+    font-size: 18px;
+  }
+}
